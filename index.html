@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Fairuz Al Hayudin, Game Programmer using Unity and C#.">
+  <title>Fairuz Al Hayudin | Game Programmer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Isi halaman dibuat otomatis oleh script.js dari data.js -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" id="brand"></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <nav><ul class="nav-links" id="navLinks"></ul></nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow" id="heroGreeting"></p>
+          <h1 id="heroTitle"></h1>
+          <p class="role" id="heroRole"></p>
+          <p class="lead" id="heroDesc"></p>
+          <div class="btn-row">
+            <a href="#projects" class="btn btn-primary" id="heroBtn1"></a>
+            <a href="#contact" class="btn btn-ghost" id="heroBtn2"></a>
+          </div>
+        </div>
+        <div class="code-card" aria-hidden="true">
+          <div class="dots"><i></i><i></i><i></i></div>
+<pre><code><span class="c">// PlayerController.cs</span>
+<span class="k">void</span> <span class="f">Update</span>() {
+  <span class="k">float</span> x = Input.<span class="f">GetAxis</span>(<span class="s">"Horizontal"</span>);
+  <span class="f">Move</span>(x * speed);
+  <span class="k">if</span> (Input.<span class="f">GetButtonDown</span>(<span class="s">"Jump"</span>))
+    <span class="f">Jump</span>();
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal-group">
+      <div class="container">
+        <h2 class="section-title" id="aboutTitle"></h2>
+        <div class="about-grid">
+          <img id="aboutPhoto" class="about-photo" alt="" width="400" height="400" loading="lazy">
+          <div>
+            <div id="aboutText"></div>
+            <ul class="tags" id="aboutFocus"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title" id="skillsTitle"></h2>
+        <div class="grid skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title" id="projectsTitle"></h2>
+        <div class="grid projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+      <div class="container">
+        <h2 class="section-title" id="certsTitle"></h2>
+        <div class="grid certs-grid" id="certsGrid"></div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="section-title" id="processTitle"></h2>
+        <ol class="steps" id="processSteps"></ol>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-box">
+        <h2 class="section-title" id="contactTitle"></h2>
+        <p class="lead" id="contactText"></p>
+        <div class="contact-links" id="contactLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footerText"></p>
+      <ul class="footer-nav" id="footerNav"></ul>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close details">✕</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
